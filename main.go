@@ -5,11 +5,11 @@ import "fmt"
 func main() {
 	conferenceName := "Go conference" //explicit variable assiging
 	const conferenceTickets = 50
-	var remainingTickets = 50
+	var remainingTickets uint = 50
 	var userName string
 	var lastName string
 	var email string
-	var userTickets int
+	var userTickets uint
 	//ask user for their name
 
 	fmt.Println("Hello world")
@@ -43,4 +43,16 @@ func main() {
 
 	//fmt.Printf("Username %v tickets %v\n", userName, userTickets)
 	fmt.Printf("Thank you %v %v for booking %v tickets , You will get confirmation mail at %v ", userName, lastName, userTickets, email)
+
+	remainingTickets = remainingTickets - userTickets
+	fmt.Println("Remaining tickets in conference :", remainingTickets)
+
+	//var bookings = [50]string{"p","v","vfv"} //array
+
+	var bookings [50]string
+	bookings[0] = userName + " " + lastName
+	fmt.Printf("Whole array : %v\n", bookings)
+	fmt.Printf("first array value : %v\n", bookings[0])
+	fmt.Printf(" array data-type: %T\n", bookings)
+	fmt.Printf("Whole array length: %v", len(bookings))
 }
