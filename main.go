@@ -49,8 +49,12 @@ func main() {
 
 	//var bookings = [50]string{"p","v","vfv"} //array
 
-	var bookings [50]string
-	bookings[0] = userName + " " + lastName
+	//var bookings [50]string array
+	bookings := []string{} //alternative slice syntax
+	//var bookings []string //slice
+
+	//bookings[0] = userName + " " + lastName for array
+	bookings = append(bookings, userName+" "+lastName)
 	fmt.Printf("Whole array : %v\n", bookings)
 	fmt.Printf("first array value : %v\n", bookings[0])
 	fmt.Printf(" array data-type: %T\n", bookings)
